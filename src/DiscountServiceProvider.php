@@ -9,7 +9,7 @@ class DiscountServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../../../config/config.php' => config_path('discount.php')
+            __DIR__.'/../config/config.php' => config_path('discount.php')
         ]);
 
         if ($this->app->runningInConsole()) {
@@ -33,7 +33,7 @@ class DiscountServiceProvider extends ServiceProvider
 
     protected function registerMigrations()
     {
-        return $this->loadMigrationsFrom(__DIR__.'/../../../database/migrations');
+        return $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
     }
 
     public function register()
@@ -41,7 +41,7 @@ class DiscountServiceProvider extends ServiceProvider
         $app = $this->app;
 
         $this->mergeConfigFrom(
-            __DIR__.'/../../../config/config.php',
+            __DIR__.'/../config/config.php',
             'discount'
         );
     }
