@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Maiksimov\Discount\UserAssignment;
+use Maiksimov\Discount\Discount;
 
 class CreateDiscountsTable extends Migration
 {
