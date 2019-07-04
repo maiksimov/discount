@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Maiksimov\Discount\UserAssignment;
 
-class CreateDiscountRelationTable extends Migration
+class CreateDiscountsTable extends Migration
 {
     /**
      * Run the migrations.

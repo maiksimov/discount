@@ -6,7 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 use Maiksimov\Discount\Discount;
 use Maiksimov\Discount\DiscountRelation;
 
-class CreateDiscountRelationTable extends Migration
+class CreateDiscountRelationsTable extends Migration
 {
     /**
      * Run the migrations.
