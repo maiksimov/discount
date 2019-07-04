@@ -21,6 +21,11 @@ class CreateDiscountRelationsTable extends Migration
             $table->string('model');
             $table->integer('model_id')->unsigned();
 
+
+        });
+
+        Schema::table((new DiscountRelation())->getTable(), function(Blueprint $table)
+        {
             $table->foreign('discount_id')
                 ->references('id')
                 ->on((new Discount)->getTable())
