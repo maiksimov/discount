@@ -14,10 +14,10 @@ trait DiscountTrait
 
     public function addDiscount(IDiscount $discount)
     {
-        $this->discount()->save([
-            'model' => get_class($this),
-            'model_id' => $this->id,
-            'discount_id' => $discount->id,
-        ]);
+        $relation = DiscountSystem::discountRelation();
+        $relation->model = get_class($this);
+        $relation->model_id = $this->id;
+        $relation->discount_id = $discount->id;
+        $relation->save();
     }
 }
