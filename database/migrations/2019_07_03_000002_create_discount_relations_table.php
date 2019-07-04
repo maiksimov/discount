@@ -20,8 +20,7 @@ class CreateDiscountRelationsTable extends Migration
             $table->integer('discount_id')->unsigned();
             $table->string('model');
             $table->integer('model_id')->unsigned();
-
-
+            $table->timestamps();
         });
 
         Schema::table((new DiscountRelation())->getTable(), function(Blueprint $table)
