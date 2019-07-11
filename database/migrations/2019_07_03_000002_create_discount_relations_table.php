@@ -1,10 +1,10 @@
 <?php
 
+use Maiksimov\Discount\Discount;
 use Illuminate\Support\Facades\Schema;
+use Maiksimov\Discount\DiscountRelation;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-use Maiksimov\Discount\Discount;
-use Maiksimov\Discount\DiscountRelation;
 
 class CreateDiscountRelationsTable extends Migration
 {
@@ -23,8 +23,7 @@ class CreateDiscountRelationsTable extends Migration
             $table->timestamps();
         });
 
-        Schema::table((new DiscountRelation())->getTable(), function(Blueprint $table)
-        {
+        Schema::table((new DiscountRelation())->getTable(), function (Blueprint $table) {
             $table->foreign('discount_id')
                 ->references('id')
                 ->on((new Discount)->getTable())

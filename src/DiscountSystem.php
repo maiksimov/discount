@@ -4,7 +4,7 @@ namespace Maiksimov\Discount;
 
 class DiscountSystem
 {
-    public static $discountModel         = 'Maiksimov\Discount\Discount';
+    public static $discountModel = 'Maiksimov\Discount\Discount';
     public static $discountRelationModel = 'Maiksimov\Discount\DiscountRelation';
 
     public static function setDiscountModel(string $discountModel)
