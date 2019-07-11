@@ -2,6 +2,6 @@
 
 namespace Maiksimov\Discount;
 
-interface IDiscount
+interface DiscountContract
 {
 }
