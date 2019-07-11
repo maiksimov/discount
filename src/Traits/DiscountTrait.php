@@ -18,6 +18,7 @@ trait DiscountTrait
         $relation->model = get_class($this);
         $relation->model_id = $this->id;
         $relation->discount_id = $discount->id;
+
         return $relation->save();
     }
 }
