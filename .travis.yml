@@ -9,7 +9,7 @@ env:
     - COMPOSER_FLAGS=""
 
 before_script:
-  - travis_rentry composer update
+  - travis_retry composer update
 
 script:
   - vendor/bin/phpunit
